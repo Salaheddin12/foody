@@ -1,20 +1,17 @@
-import styled from 'styled-components';
+import styles from './Card.module.css'
 import Image from 'next/image'
 
-const index = () => {
+export default  () => {
     return (
-        <div style={{textAlign:'center'}}>
-          <Image/> 
+        <div className={styles.Wrapper}>
+          <Image style={{borderRadius:'50%'}} src="/dish.jpg" width={150} height={150} layout='fixed'/> 
+          <h2 className={styles.Label}>Chicken Vesuvio</h2>
+          <h3 className={styles.DietLabel}>Low-Carb</h3>
+          <div className={styles.Description}>
+              <h2>121 Calories</h2>
+              <h2>3 Ingredients</h2>
+          </div>
         </div>
     );
 };
 
-export default index;
-
-const Label = styled.h1`
-    
-`;
-
-const DietLabel = styled.h2`
-
-`;

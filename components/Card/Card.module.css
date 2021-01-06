@@ -1,0 +1,31 @@
+.Description {
+  font-size: 11px;
+  margin-top: 15px;
+  display: flex;
+  color: #2c3e50;
+  justify-content: space-between;
+}
+.Description > h2 {
+  display: inline-block;
+}
+.Wrapper {
+  text-align: center;
+  width: 250px;
+  padding: 2rem 1rem;
+  background-color: #ecf0f1;
+  opacity: 0.9;
+  box-shadow: 0 7px 15px #52be80;
+  border-radius: 10px;
+  margin: 2rem;
+  cursor: pointer;
+}
+.Wrapper img {
+  border-radius: 50%;
+}
+.Label {
+  color: #212f3d;
+}
+
+.DietLabel {
+  color: #52be80;
+}
