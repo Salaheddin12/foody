@@ -4,17 +4,20 @@ import axios from 'axios'
 import Card from "../../components/Card";
 const queryString = require('query-string');
 
+const API_KEY= localStorage.ADAMM_API_KEY;
+
 export default function ({selected,recipes}) {
   const suggestions = recipes.filter((item,index)=> item.recipe.uri!==selected && index<4);
 
   const selectedRecipe = recipes.filter((item)=> item.recipe.uri===selected)[0].recipe;
+  
   const {label,ingredients,totalNutrients,image,healthLabels,dietLabels}=selectedRecipe;
   
   const {FAT,CHOCDF,CHOLE,PROCNT,VITC,VITD} = totalNutrients;
+
   const nutrients = [FAT,CHOCDF,CHOLE,PROCNT,VITC,VITD];
+
   const labels = healthLabels.concat(dietLabels);
-  console.log(healthLabels,dietLabels);
-  console.log(labels);
   
   return (
     <div className={styles.container}>
@@ -57,7 +60,7 @@ export default function ({selected,recipes}) {
 export async function getServerSideProps({params}) {
   const parsedData = queryString.parse(params.recipe);
   const {query,selected} = parsedData;
-  const {data} = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=07f8ce7f&app_key=2788be699b6b5eecad7e70824ab717ab`)
+  const {data} = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=07f8ce7f&app_key=${API_KEY}`)
 
   return {
     props: {recipes:data.hits,selected }
