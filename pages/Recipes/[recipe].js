@@ -4,7 +4,7 @@ import axios from 'axios'
 import Card from "../../components/Card";
 const queryString = require('query-string');
 
-const API_KEY= localStorage.ADAMM_API_KEY;
+const API_KEY= process.env.ADAMM_API_KEY;
 
 export default function ({selected,recipes}) {
   const suggestions = recipes.filter((item,index)=> item.recipe.uri!==selected && index<4);

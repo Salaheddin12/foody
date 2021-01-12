@@ -4,7 +4,7 @@ import Card from "../../components/Card";
 import Search from "../../components/Search";
 import axios from "axios";
 
-const API_KEY= localStorage.ADAMM_API_KEY;
+const API_KEY= process.env.ADAMM_API_KEY;
 
 export default function index({recipes,query}) {
   
