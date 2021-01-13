@@ -3,9 +3,9 @@
 This blog is built using Nextjs, And is still in progress.
 
 ## ✅ Demo
-<img src="./screenshots/home.jpg" alt="home"/>
-<img src="./screenshots/search.png" alt="search" width="200"/>
-<img src="./screenshots/recipe.png" alt="recipe" width="200"/>
+![home](./screenshots/home.jpg)
+![search](./screenshots/search.png)
+![recipe](./screenshots/recipe.png)
 
 ## ✅ Install 
 - Clone the project.
