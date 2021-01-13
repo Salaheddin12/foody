@@ -4,10 +4,11 @@ import Card from "../../components/Card";
 import Search from "../../components/Search";
 import axios from "axios";
 
-const API_KEY= process.env.ADAMM_API_KEY;
+const API_KEY= process.env.ADAMAM_API_KEY;
 
 export default function index({recipes,query}) {
-  
+  console.log(recipes);
+
   return (
     <div className="Container">
       <Head>
@@ -15,11 +16,18 @@ export default function index({recipes,query}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Search />
+      {recipes.length==0?
+          <div className={styles.error}>
+            Sorry! we didn't find anthing about '{query}'😌.
+            try searching for somthing else 😀
+          </div>
+        :
       <div className={styles.Wrapper}>
         {
           recipes.map((item)=><Card recipe={item.recipe} query={query}/>)
         }
       </div>
+      }
     </div>
   );
 }

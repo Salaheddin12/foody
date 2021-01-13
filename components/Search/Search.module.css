@@ -7,15 +7,20 @@
   cursor: pointer;
   color: #ecf0f1;
   box-shadow: 1px 1px 15px #eafaf1;
-  margin-top: 4rem;
   letter-spacing: 2px;
+  outline: none;
 }
 .button:hover {
   background-color: #27ae60;
   color: #ecf0f1;
 }
 .Wrapper {
+  display: inline-block;
+  height: fit-content;
   margin: 3rem 0;
+}
+.Errors {
+  box-shadow: 3px 3px 10px red;
 }
 .search {
   color: #1b2631;

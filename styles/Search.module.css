@@ -1,7 +1,12 @@
-
 .Wrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   width: 100%;
+}
+
+.error {
+  color: #212f3d;
+  font-size: 35px;
+  margin: 4rem 0;
 }
