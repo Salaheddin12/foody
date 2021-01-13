@@ -18,6 +18,7 @@
   display: inline-block;
   height: fit-content;
   margin: 3rem 0;
+  position: relative;
 }
 .Errors {
   box-shadow: 3px 3px 10px red;

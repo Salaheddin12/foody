@@ -1,14 +1,27 @@
-
 .Header {
-width:100%;
-letter-spacing:2px;
-background:url('/background.jpg') center/cover ;
-height:100vh;
-text-align:center;
-padding-top:8rem;  
+  position: relative;
+  width: 100%;
+  letter-spacing: 2px;
+  height: 100vh;
+  text-align: center;
+  padding-top: 8rem;
 }
-.Title{
-color: #eafaf1;
-font-size:6rem;
-max-width:650px;
-margin: 0 auto }
+.Header::before {
+  content: "";
+  position: absolute;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: top center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.9;
+}
+.Title {
+  color: #eafaf1;
+  font-size: 6rem;
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+}
