@@ -10,3 +10,8 @@
   font-size: 35px;
   margin: 4rem 0;
 }
+
+.homeRedirect {
+  color: white;
+  text-decoration: underline;
+}

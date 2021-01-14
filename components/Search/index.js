@@ -31,7 +31,7 @@ const schema = Joi.object({
 
     const OnSearchSubmit = ()=>{
         if(error===''){
-            window.open(`/search/${Query}`)
+            window.location.replace(`/search/${Query}`)
         }
         else{
             toast.error(error);
