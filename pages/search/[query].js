@@ -1,7 +1,6 @@
-import styles from "../../styles/Search.module.css";
-import Head from 'next/head'
 import Card from "../../components/Card";
 import Search from "../../components/Search";
+import styles from "../../styles/Search.module.css";
 import axios from "axios";
 
 const API_KEY= process.env.ADAMAM_API_KEY;
@@ -11,10 +10,6 @@ export default function index({recipes,query}) {
 
   return (
     <div className="Container">
-      <Head>
-        <title>Food</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Search />
       {recipes.length==0?
           <div className={styles.error}>
